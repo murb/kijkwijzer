@@ -2,7 +2,7 @@ module Kijkwijzer
   module ViewHelpers
     def render_kijkwijzer_svg_definitions
       svg_txt = File.open(open(File.join(File.dirname(__FILE__),'..','kijkwijzer.svg'))).read
-      svg_txt = svg_text.html_safe if defined?(ActiveSupport)
+      svg_txt = svg_txt.html_safe if defined?(ActiveSupport)
       svg_txt
     end
     def render_kijkwijzers result
