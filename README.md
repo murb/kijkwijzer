@@ -34,23 +34,25 @@ You can also filter by year:
 Kijkwijzer.search("piano", {year: 2011})
 ```
 
-### Rails helpers
+### Rails view-helpers (SVG icons)
 
 To make things even easier I included the SVG-icon set. Simply use the two methods.
 
-Within the html's head, load the iconset definition:
+Somewhere in the top of your body, load the iconset definition:
 
 ```ruby
 <%= render_kijkwijzer_svg_definitions %>
 ```
-Then for each movie:
+Then to display the movie results use the view helper `render_kijkwijzers`:
 
 ```ruby
-<%= render_kijkwijzers ratings %>
+<% Kijkwijzer.search("piano").each do |rating| %>
+<h2><%= rating.title %></h2>
+<p><%= render_kijkwijzers rating %></p>
+<% end %>
 ```
 
-(where ratings is a single result object)
-
+Make sure you format the icons properly, otherwise you'll get huge icons ... I believe I've added plenty of classes for easy styling using css.
 
 ## Development
 
