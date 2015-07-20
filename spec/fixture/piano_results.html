@@ -1,0 +1,916 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="Revisit-After" content="7 days">
+	<meta name="Robots" content="index, follow">
+
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=1">
+
+	<meta property="og:title" content="Classificaties - kijkwijzer.nl">
+	<meta property="og:description" content="Kijkwijzer waarschuwt ouders en opvoeders tot welke leeftijd een televisieprogramma of film schadelijk kan zijn voor kinderen.">
+	<meta property="og:image" content="//www.kijkwijzer.nl/images/layout/facebook.jpg">
+
+
+	<meta name="Keywords" content="">
+		<meta name="Description" content="Kijkwijzer waarschuwt ouders en opvoeders tot welke leeftijd een televisieprogramma of film schadelijk kan zijn voor kinderen.">
+	<title>Classificaties - kijkwijzer.nl</title>
+	<link href="/styles/layout.css" rel="stylesheet" type="text/css">
+
+
+
+
+	<script src="/javascript/global.js" language="javascript"></script>
+
+	<script type="text/javascript" src="/javascript/ajax-dynamic-list.js">
+	/************************************************************************************************************
+	(C) www.dhtmlgoodies.com, April 2006
+
+	This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.
+
+	Terms of use:
+	You are free to use this script as long as the copyright message is kept intact. However, you may not
+	redistribute, sell or repost it without our permission.
+
+	Thank you!
+
+	www.dhtmlgoodies.com
+	Alf Magne Kalleland
+
+	************************************************************************************************************/
+	</script>
+
+
+	<!--[if IE]>
+	<style>
+
+
+	</style>
+	<![endif]-->
+
+<SCRIPT TYPE="text/javascript">
+
+function submitenter(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+{
+myfield.form.submit();
+return false;
+}
+else
+return true;
+}
+
+function submitenter2(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13)
+{
+return false;
+}
+else
+return true;
+}
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-24918951-1']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+
+</script>
+
+<script type="text/javascript" src="/javascript/swfobject.js"></script>
+
+
+
+	<link rel="stylesheet" href="/styles/plugins.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="/javascript/jquery-ui.js"></script>
+
+	<link rel="stylesheet" href="/styles/jquery.maximage.css?v=1.2" type="text/css" media="screen" charset="utf-8">
+
+	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+	<script type="text/javascript" src="/javascript/jquery.flexisel.js"></script>
+
+
+	<!-- AddThis Smart Layers BEGIN -->
+
+	<!-- Go to //www.addthis.com/get/smart-layers to customize -->
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-534bea5519896030"></script>
+
+	<script type="text/javascript">
+
+	  addthis.layers({
+
+	    'theme' : 'transparent',
+
+	    'share' : {
+
+	      'position' : 'left',
+
+	      'numPreferredServices' : 6
+
+	    }
+
+	  });
+
+	</script>
+
+	<!-- AddThis Smart Layers END -->
+
+
+</head>
+<body >
+
+
+
+	<div id='fullscreenDiv' class='fullscreenDiv' style='display: none' onclick='closeFullscreenDiv()'>
+
+		<script>
+
+		function closeFullscreenDiv()
+		{
+			ge("fullscreenVideo").pause();
+			hideMe("fullscreenDiv");
+		}
+
+		</script>
+
+		<div id='video_fragment'>
+
+
+		</div>
+	</div>
+
+
+
+
+
+<div id='header' class='header'>
+
+	<div class='header_logo'><a href='/'><img src='/images/layout/logo.gif' class='header_logo_img'></a></div>	<div class='header_menu_td'><a href='/' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/1_home.png' width='73'></a><a href='/actueel' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/2_actueel.png' width='104'></a><a href='/kijkwijzer' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/3_kijkwijzer.png' width='136'></a><a href='/pegi' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/26_pegi.png' width='61'></a><a href='/kids' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/4_menuitem_kids.png' width='76'></a><a href='/klachten' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/5_klachten.png' width='118'></a><a href='/organisatie' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/6_organisatie.png' width='145'></a><a href='/kennis' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/7_kennis.png' width='89'></a><a href='/contact' class='header_menu' onfocus='this.blur();'><img src='/upload/menuitems/8_contact.png' width='107'></a></div>
+
+</div>
+
+<div id='main' class='main'>
+
+	<div class='content'><span class='h3_tab'>Classificaties</span><img src='/images/layout/bg_content.gif' width='480' height='10'><div class='content_hok'>
+
+	<div style='border-bottom: 1px solid #0093ac; margin-bottom: 10px;'>
+
+		<a href='/index.php?id=3__i&searchfor=piano&kijkwijzer=,,,,,,,&pegi=,,,,,,,,&tab=' class='tab2' onfocus='this.blur();' style='text-decoration: none'>alles</a>
+		<a href='/index.php?id=3__i&searchfor=piano&kijkwijzer=,,,,,,,&pegi=,,,,,,,,&tab=KIJKWIJZER' class='tab2_selected' onfocus='this.blur();' style='text-decoration: none'>Kijkwijzer (film, TV, DVD)</a>
+		<a href='/index.php?id=3__i&searchfor=piano&kijkwijzer=,,,,,,,&pegi=,,,,,,,,&tab=PEGI' class='tab2' onfocus='this.blur();' style='text-decoration: none'>PEGI (games)</a>
+
+	</div>
+
+
+
+		<a href='/pianomania/page26-0-178267.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>Pianomania (Pianomania)</b>
+			Productietype: Documentaire. Productiejaar: 2009. <br>
+
+			<img src='/images/icons/M_AL.png' width='20' height='20' align='absmiddle' title='Alle leeftijden'>
+
+		</a>
+
+
+
+		<a href='/piano-blues/page26-0-56432.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>piano blues</b>
+			Productietype: Documentaire. Productiejaar: 2004. <br>
+
+			<img src='/images/icons/M_AL.png' width='20' height='20' align='absmiddle' title='Alle leeftijden'>
+
+		</a>
+
+
+
+		<a href='/piano-pianissimo/page26-0-56433.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>Piano Pianissimo</b>
+			Productietype: TV-drama. Productiejaar: 2004. <br>
+
+			<img src='/images/icons/M_AL.png' width='20' height='20' align='absmiddle' title='Alle leeftijden'>
+
+		</a>
+
+
+
+		<a href='/piano-the/page26-0-56434.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>Piano, the</b>
+			Productietype: Speelfilm. Productiejaar: 2001. <br>
+
+			<img src='/images/icons/M_12.png' width='20' height='20' align='absmiddle' title='Mogelijk schadelijk tot 12 jaar'><img src='/images/icons/M_G.png' width='20' height='20' align='absmiddle' title='Geweld'>
+
+		</a>
+
+
+
+		<a href='/elton-john-million-dollar-piano-live-in-las-vegas/page26-0-236652.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>Elton John: Million Dollar Piano Live in Las Vegas</b>
+			Productietype: Amusement. Productiejaar: 2014. <br>
+
+			<img src='/images/icons/M_AL.png' width='20' height='20' align='absmiddle' title='Alle leeftijden'>
+
+		</a>
+
+
+
+		<a href='/blackmail/page26-0-227513.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>Blackmail (Grand Piano)</b>
+			Productietype: Speelfilm. Productiejaar: 2014. <br>
+
+			<img src='/images/icons/M_12.png' width='20' height='20' align='absmiddle' title='Mogelijk schadelijk tot 12 jaar'><img src='/images/icons/M_G.png' width='20' height='20' align='absmiddle' title='Geweld'><img src='/images/icons/M_T.png' width='20' height='20' align='absmiddle' title='Grof taalgebruik'>
+
+		</a>
+
+
+
+		<a href='/avro-close-up-lang-lang-piano-superstar/page26-0-190704.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>AVRO Close Up: Lang Lang - Piano Superstar (Lang Lang)</b>
+			Productietype: Documentaire. Productiejaar: 2011. <br>
+
+			<img src='/images/icons/M_AL.png' width='20' height='20' align='absmiddle' title='Alle leeftijden'>
+
+		</a>
+
+
+
+		<a href='/the-piano-forest/page26-0-202592.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>The Piano Forest</b>
+			Productietype: Animatie. Productiejaar: 2007. <br>
+
+			<img src='/images/icons/M_6.png' width='20' height='20' align='absmiddle' title='Mogelijk schadelijk tot 6 jaar'><img src='/images/icons/M_G.png' width='20' height='20' align='absmiddle' title='Geweld'><img src='/images/icons/M_A.png' width='20' height='20' align='absmiddle' title='Angst'>
+
+		</a>
+
+
+
+		<a href='/the-piano-player/page26-0-63440.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>The Piano Player</b>
+			Productietype: Speelfilm. Productiejaar: 2001. <br>
+
+			<img src='/images/icons/M_16.png' width='20' height='20' align='absmiddle' title='Mogelijk schadelijk tot 16 jaar'><img src='/images/icons/M_G.png' width='20' height='20' align='absmiddle' title='Geweld'><img src='/images/icons/M_T.png' width='20' height='20' align='absmiddle' title='Grof taalgebruik'>
+
+		</a>
+
+
+
+		<a href='/eine-kleine-nachtmerrie/page26-0-43386.html' class='nieuwsitem' style="background-image: url('/images/layout/foto_film.jpg'); text-decoration: none">
+
+			<b>Eine Kleine Nachtmerrie (De Piano)</b>
+			Productietype: Serie (ook soap). Productiejaar: 1997. <br>
+
+			<img src='/images/icons/M_6.png' width='20' height='20' align='absmiddle' title='Mogelijk schadelijk tot 6 jaar'><img src='/images/icons/M_A.png' width='20' height='20' align='absmiddle' title='Angst'>
+
+		</a>
+
+
+                    <br>
+                    <table cellspacing='0' cellpadding='0' class='pagination'>
+		<td class='pagination_vorige'>
+
+                    < Vorige
+
+		</td>
+		<td class='pagination_blz'>
+                   (1)
+
+		</td>
+		<td class='pagination_volgende'>
+
+                   Volgende >
+
+		</td>
+                   </table>		</div>
+
+
+	</div>
+	<div class='sidebar'>		<div class='hok_zoeken' style="background-image: url('/images/layout/bg_zoeken.gif'); ">
+
+			<div style='margin-bottom: 12px;'>
+
+				<a href='/classificaties-uitgelegd/page200.html' class='c_AL'><span>Alle leeftijden</span></a> <a href='/classificaties-uitgelegd/page201.html' class='c_6'><span>Mogelijk schadelijk tot 6 jaar</span></a> <a href='/classificaties-uitgelegd/page202.html' class='c_9'><span>Mogelijk schadelijk tot 9 jaar</span></a> <a href='/classificaties-uitgelegd/page203.html' class='c_12'><span>Mogelijk schadelijk tot 12 jaar</span></a> <a href='/classificaties-uitgelegd/page204.html' class='c_16'><span>Mogelijk schadelijk tot 16 jaar</span></a> <a href='/classificaties-uitgelegd/page205.html' class='c_G'><span>Geweld</span></a> <a href='/classificaties-uitgelegd/page206.html' class='c_A'><span>Angst</span></a> <a href='/classificaties-uitgelegd/page207.html' class='c_S'><span>Seks</span></a> <a href='/classificaties-uitgelegd/page210.html' class='c_D'><span>Discriminatie</span></a> <a href='/classificaties-uitgelegd/page209.html' class='c_H'><span>Drugs en/of alcoholmisbruik</span></a> <a href='/classificaties-uitgelegd/page208.html' class='c_T'><span>Grof taalgebruik</span></a>
+			</div>
+
+			<form name='zoekenForm' method='get' action='/index.php'>
+			<input type="hidden" id="search1437394936_hidden" name="search1437394936_ID">
+			<input type="hidden" id="searchid" name="searchid" value='1437394936'>
+			<input type="hidden" id="id" name="id" value='3'>
+			<table cellspacing='0' cellpadding='0' class='hok_zoeken_table'>
+			<tr>
+				<td class='hok_zoeken_field'>
+
+					<input type="text" id="search1437394936" name="search1437394936" value="piano" onkeyup="ajax_showOptions(this,'getCountriesByLetters',event, document.zoekenForm.professional.checked)" onKeyPress="return submitenter(this,event)">
+
+				</td>
+				<td class='hok_zoeken_button'>
+
+					<a href='javascript: document.zoekenForm.submit();'><img src='/images/layout/button_zoek.gif' width='69' height='29' border='0'></a>
+
+				</td>
+			</tr>
+			</table>
+
+
+			<a href='javascript: toggleMe("div_uitgebreidzoeken"); void(0);' onfocus='this.blur();'>Uitgebreid zoeken</a>
+
+			<div class='hok_zoeken_tussen'></div><span><input type='checkbox' name='professional' value='1' ></span> <font style='color: #FFFFFF;'>Doorzoek ook commercials, teasers en trailers</font>
+
+		</div>
+				<div class='hok_uitgebreidzoeken' id='div_uitgebreidzoeken' >
+
+				<script>
+				//document.zoekenForm.search1437394936.focus();
+
+				function uitgebreidZoekenTab(welke)
+				{
+
+
+					if(welke == 2)
+					{
+						document.getElementById("uitgebreidZoekenTab2").className = "tab3_selected";
+						toggleMe2("uitgebreidzoeken_kijkwijzer", 1);
+						document.zoekenForm.tab.value = "KIJKWIJZER";
+					}
+					else
+					{
+						document.getElementById("uitgebreidZoekenTab2").className = "tab3";
+						toggleMe2("uitgebreidzoeken_kijkwijzer", 0);
+					}
+
+
+					if(welke == 3)
+					{
+						document.getElementById("uitgebreidZoekenTab3").className = "tab3_selected";
+						toggleMe2("uitgebreidzoeken_pegi", 1);
+						document.zoekenForm.tab.value = "PEGI";
+					}
+					else
+					{
+						document.getElementById("uitgebreidZoekenTab3").className = "tab3";
+						toggleMe2("uitgebreidzoeken_pegi", 0);
+					}
+
+					if(welke == 1)
+					{
+						document.getElementById("uitgebreidZoekenTab1").className = "tab3_selected";
+						document.zoekenForm.tab.value = "";
+						toggleMe2("uitgebreidzoeken_kijkwijzer", 1);
+						toggleMe2("uitgebreidzoeken_pegi", 1);
+					}
+					else
+					{
+						document.getElementById("uitgebreidZoekenTab1").className = "tab3";
+
+					}
+				}
+
+
+				function slider (a_init, a_tpl)
+				{
+					this.f_setValue  = f_sliderSetValue;
+					this.f_getPos    = f_sliderGetPos;
+
+					// register in the global collection
+					if (!window.A_SLIDERS)
+					{
+						window.A_SLIDERS = [];
+					}
+					this.n_id = window.A_SLIDERS.length;
+					window.A_SLIDERS[this.n_id] = this;
+
+					// save config parameters in the slider object
+					var s_key;
+					if (a_tpl)
+					{
+						for (s_key in a_tpl)
+						{
+							this[s_key] = a_tpl[s_key];
+						}
+					}
+					for (s_key in a_init)
+					{
+						this[s_key] = a_init[s_key];
+					}
+
+					this.n_pix2value = this.n_pathLength / (this.n_maxValue - this.n_minValue);
+					if (this.n_value == null)
+					{
+						this.n_value = this.n_minValue;
+					}
+					// generate the control's HTML
+					document.write(
+						'<div style="width:' + this.n_controlWidth + 'px;height:' + this.n_controlHeight + 'px;border:0; background-image:url(' + this.s_imgControl + ')" id="sl' + this.n_id + 'base">' +
+						'<img src="' + this.s_imgSlider + '" width="' + this.n_sliderWidth + '" height="' + this.n_sliderHeight + '" border="0" style="position:relative;left:' + this.n_pathLeft + 'px;top:' + this.n_pathTop + 'px;z-index:' + this.n_zIndex + ';cursor:pointer;visibility:hidden;" name="sl' + this.n_id + 'slider" id="sl' + this.n_id + 'slider" onmousedown="return f_sliderMouseDown(' + this.n_id + ')"/></div>'
+					);
+					this.e_base   = get_element('sl' + this.n_id + 'base');
+					this.e_slider = get_element('sl' + this.n_id + 'slider');
+
+					// safely hook document/window events
+					if (document.onmousemove != f_sliderMouseMove) {
+						window.f_savedMouseMove = document.onmousemove;
+						document.onmousemove = f_sliderMouseMove;
+					}
+					if (document.onmouseup != f_sliderMouseUp) {
+						window.f_savedMouseUp = document.onmouseup;
+						document.onmouseup = f_sliderMouseUp;
+					}
+					// preset to the value in the input box if available
+					var e_input = this.s_form == null
+						? get_element(this.s_name)
+						: document.forms[this.s_form]
+							? document.forms[this.s_form].elements[this.s_name]
+							: null;
+					this.f_setValue(e_input && e_input.value != '' ? e_input.value : null, 1);
+					this.e_slider.style.visibility = 'visible';
+				}
+
+				function f_sliderSetValue (n_value, b_noInputCheck) {
+					if (n_value == null)
+						n_value = this.n_value == null ? this.n_minValue : this.n_value;
+					if (isNaN(n_value))
+						return false;
+					// round to closest multiple if step is specified
+					if (this.n_step)
+						n_value = Math.round((n_value - this.n_minValue) / this.n_step) * this.n_step + this.n_minValue;
+					// smooth out the result
+					if (n_value % 1)
+						n_value = Math.round(n_value * 1e5) / 1e5;
+
+					if (n_value < this.n_minValue)
+						n_value = this.n_minValue;
+					if (n_value > this.n_maxValue)
+						n_value = this.n_maxValue;
+
+					this.n_value = n_value;
+
+					// move the slider
+					if (this.b_vertical)
+						this.e_slider.style.top  = (this.n_pathTop + this.n_pathLength - Math.round((n_value - this.n_minValue) * this.n_pix2value)) + 'px';
+					else
+						this.e_slider.style.left = (this.n_pathLeft + Math.round((n_value - this.n_minValue) * this.n_pix2value)) + 'px';
+
+					// save new value
+					var e_input;
+					if (this.s_form == null) {
+						e_input = get_element(this.s_name);
+						if (!e_input)
+							return b_noInputCheck ? null : f_sliderError(this.n_id, "Can not find the input with ID='" + this.s_name + "'.");
+					}
+					else {
+						var e_form = document.forms[this.s_form];
+						if (!e_form)
+							return b_noInputCheck ? null : f_sliderError(this.n_id, "Can not find the form with NAME='" + this.s_form + "'.");
+						e_input = e_form.elements[this.s_name];
+						if (!e_input)
+							return b_noInputCheck ? null : f_sliderError(this.n_id, "Can not find the input with NAME='" + this.s_name + "'.");
+					}
+
+
+					if(this.s_name == "sliderValue4h")
+					{
+						var bgpic = document.getElementById("bg_slide");
+						bgpic.src = "/images/slider/bg" + n_value + ".gif";
+
+						if(n_value == 0) e_input.value = "Alle leeftijden";
+						if(n_value == 1) e_input.value = "Mogelijk schadelijk tot 6 jaar";
+						if(n_value == 2) e_input.value = "Mogelijk schadelijk tot 9 jaar";
+						if(n_value == 3) e_input.value = "Mogelijk schadelijk tot 12 jaar";
+						if(n_value == 4) e_input.value = "Mogelijk schadelijk tot 16 jaar";
+
+					}
+					else
+					{
+						var bgpic = document.getElementById("bg_slide2");
+						bgpic.src = "/images/slider/bg" + n_value + "pegi.gif";
+
+						if(n_value == 0) e_input.value = "Alle leeftijden";
+						if(n_value == 1) e_input.value = "Let op met kinderen tot 7 jaar";
+						if(n_value == 2) e_input.value = "Let op met kinderen tot 12 jaar";
+						if(n_value == 3) e_input.value = "Let op met kinderen tot 16 jaar";
+						if(n_value == 4) e_input.value = "Let op met kinderen tot 18 jaar";
+
+					}
+
+
+				}
+
+				// get absolute position of the element in the document
+				function f_sliderGetPos (b_vertical, b_base) {
+					var n_pos = 0,
+						s_coord = (b_vertical ? 'Top' : 'Left');
+					var o_elem = o_elem2 = b_base ? this.e_base : this.e_slider;
+
+					while (o_elem) {
+						n_pos += o_elem["offset" + s_coord];
+						o_elem = o_elem.offsetParent;
+					}
+					o_elem = o_elem2;
+
+					var n_offset;
+					while (o_elem.tagName != "BODY") {
+						n_offset = o_elem["scroll" + s_coord];
+						if (n_offset)
+							n_pos -= o_elem["scroll" + s_coord];
+						o_elem = o_elem.parentNode;
+					}
+					return n_pos;
+				}
+
+				function f_sliderMouseDown (n_id) {
+					window.n_activeSliderId = n_id;
+					return false;
+				}
+
+				function f_sliderMouseUp (e_event, b_watching) {
+					if (window.n_activeSliderId != null) {
+						var o_slider = window.A_SLIDERS[window.n_activeSliderId];
+						o_slider.f_setValue(o_slider.n_minValue + (o_slider.b_vertical
+							? (o_slider.n_pathLength - parseInt(o_slider.e_slider.style.top) + o_slider.n_pathTop)
+							: (parseInt(o_slider.e_slider.style.left) - o_slider.n_pathLeft)) / o_slider.n_pix2value);
+						if (b_watching)	return;
+						window.n_activeSliderId = null;
+					}
+					if (window.f_savedMouseUp)
+						return window.f_savedMouseUp(e_event);
+				}
+
+				function f_sliderMouseMove (e_event) {
+
+					if (!e_event && window.event) e_event = window.event;
+
+					// save mouse coordinates
+					if (e_event) {
+						window.n_mouseX = e_event.clientX + f_scrollLeft();
+						window.n_mouseY = e_event.clientY + f_scrollTop();
+					}
+
+					// check if in drag mode
+					if (window.n_activeSliderId != null) {
+						var o_slider = window.A_SLIDERS[window.n_activeSliderId];
+
+						var n_pxOffset;
+						if (o_slider.b_vertical) {
+							var n_sliderTop = window.n_mouseY - o_slider.n_sliderHeight / 2 - o_slider.f_getPos(1, 1) - 3;
+							// limit the slider movement
+							if (n_sliderTop < o_slider.n_pathTop)
+								n_sliderTop = o_slider.n_pathTop;
+							var n_pxMax = o_slider.n_pathTop + o_slider.n_pathLength;
+							if (n_sliderTop > n_pxMax)
+								n_sliderTop = n_pxMax;
+							o_slider.e_slider.style.top = n_sliderTop + 'px';
+							n_pxOffset = o_slider.n_pathLength - n_sliderTop + o_slider.n_pathTop;
+						}
+						else {
+							var n_sliderLeft = window.n_mouseX - o_slider.n_sliderWidth / 2 - o_slider.f_getPos(0, 1) - 3;
+							// limit the slider movement
+							if (n_sliderLeft < o_slider.n_pathLeft)
+								n_sliderLeft = o_slider.n_pathLeft;
+							var n_pxMax = o_slider.n_pathLeft + o_slider.n_pathLength;
+							if (n_sliderLeft > n_pxMax)
+								n_sliderLeft = n_pxMax;
+							o_slider.e_slider.style.left = n_sliderLeft + 'px';
+							n_pxOffset = n_sliderLeft - o_slider.n_pathLeft;
+						}
+						if (o_slider.b_watch)
+							 f_sliderMouseUp(e_event, 1);
+
+						return false;
+					}
+
+					if (window.f_savedMouseMove)
+						return window.f_savedMouseMove(e_event);
+				}
+
+				// get the scroller positions of the page
+				function f_scrollLeft() {
+					return f_filterResults (
+						window.pageXOffset ? window.pageXOffset : 0,
+						document.documentElement ? document.documentElement.scrollLeft : 0,
+						document.body ? document.body.scrollLeft : 0
+					);
+				}
+				function f_scrollTop() {
+					return f_filterResults (
+						window.pageYOffset ? window.pageYOffset : 0,
+						document.documentElement ? document.documentElement.scrollTop : 0,
+						document.body ? document.body.scrollTop : 0
+					);
+				}
+				function f_filterResults(n_win, n_docel, n_body) {
+					var n_result = n_win ? n_win : 0;
+					if (n_docel && (!n_result || (n_result > n_docel)))
+						n_result = n_docel;
+					return n_body && (!n_result || (n_result > n_body)) ? n_body : n_result;
+				}
+
+				function f_sliderError (n_id, s_message) {
+					alert("Slider #" + n_id + " Error:\n" + s_message);
+					window.n_activeSliderId = null;
+				}
+
+				get_element = document.all ?
+					function (s_id) { return document.all[s_id] } :
+					function (s_id) { return document.getElementById(s_id) };
+				</script>
+
+			<br>
+
+			<div class='ruler'>
+
+				<a href='javascript: uitgebreidZoekenTab(1);' id='uitgebreidZoekenTab1' class='tab3_selected' onfocus='this.blur();'>alles</a>
+				<a href='javascript: uitgebreidZoekenTab(2);' id='uitgebreidZoekenTab2' class='tab3' onfocus='this.blur();'>Kijkwijzer (film, TV, DVD)</a>
+				<a href='javascript: uitgebreidZoekenTab(3);' id='uitgebreidZoekenTab3' class='tab3' onfocus='this.blur();'>PEGI (games)</a>
+				<input type='hidden' name='tab' value=''>
+
+			</div>
+
+			<div id='uitgebreidzoeken_kijkwijzer' name='uitgebreidzoeken_kijkwijzer'>
+
+
+				<div style='position: absolute; z-index: 0;'><img name='bg_slide' id='bg_slide' src='/images/slider/bg4.gif' width='440' height='110'></div>
+
+				<div style='position: absolute; z-index: 100; padding-top: 10px;'><a href="javascript: document.zoekenForm.kijkwijzer.value='AL'; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.kijkwijzer.value=6; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.kijkwijzer.value=9; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.kijkwijzer.value=12; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.kijkwijzer.value=16; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='70' height='70'></a></div>
+				<input type='hidden' name='kijkwijzer' value=''>
+
+				<div style='padding-top: 84px; padding-left: 20px;'>
+
+
+				<table cellspacing='0' cellpadding='0'>
+				<tr>
+				<td>
+
+				<script language="JavaScript">
+					var A_TPL4h = {
+						'b_vertical' : false,
+						'b_watch': true,
+						'n_controlWidth': 400,
+						'n_controlHeight': 26,
+						'n_sliderWidth': 26,
+						'n_sliderHeight': 26,
+						'n_pathLeft' : 0,
+						'n_pathTop' : 0,
+						'n_pathLength' : 374,
+						's_imgControl': '/images/slider/background.gif',
+						's_imgSlider': '/images/slider/handle.png',
+						'n_zIndex': 1
+					}
+					var A_INIT4h = {
+						's_form' : 'zoekenForm',
+						's_name': 'sliderValue4h',
+						'n_minValue' : 0,
+						'n_maxValue' : 4,
+						'n_value' : 4,
+						'n_step' : 1
+					}
+
+					new slider(A_INIT4h, A_TPL4h);
+				</script>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<input name="sliderValue4h" id="sliderValue4h" value='Mogelijk schadelijk tot 16 jaar' type="Text" onfocus='this.blur();' style='margin-left: 5px; border: 0px; background-color: #c91f45; font-family: Helvetica, Arial; font-size: 12px; font-weight: normal; color: #FFFFFF; width: 350px;'>
+				</div>
+
+				</td>
+				</tr>
+				</table>
+
+				</div>
+
+				<div style='margin-top: 10px; padding-top: 10px; padding-bottom: 10px; border-top: 1px solid #000000; border-bottom: 1px solid #000000;'>
+				<div style='padding-bottom: 10px; color: #FFFFFF;'>Sluit deze inhoudspictorgammen uit (witgekleurd betekent uitgesloten):</div><a href="javascript: document.zoekenForm.kijkwijzer_G.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Geweld uit te sluiten'><img src='/images/icons/B_G.png' width='37' height='37' style='margin-right: 20px;'></a><a href="javascript: document.zoekenForm.kijkwijzer_A.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Angst uit te sluiten'><img src='/images/icons/B_A.png' width='37' height='37' style='margin-right: 20px;'></a><a href="javascript: document.zoekenForm.kijkwijzer_S.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Seks uit te sluiten'><img src='/images/icons/B_S.png' width='37' height='37' style='margin-right: 20px;'></a><a href="javascript: document.zoekenForm.kijkwijzer_D.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Discriminatie uit te sluiten'><img src='/images/icons/B_D.png' width='37' height='37' style='margin-right: 20px;'></a><a href="javascript: document.zoekenForm.kijkwijzer_H.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Drugs en/of alcoholmisbruik uit te sluiten'><img src='/images/icons/B_H.png' width='37' height='37' style='margin-right: 20px;'></a><a href="javascript: document.zoekenForm.kijkwijzer_T.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Grof taalgebruik uit te sluiten'><img src='/images/icons/B_T.png' width='37' height='37' style='margin-right: 20px;'></a>				</div>
+
+				<input type='hidden' name='kijkwijzer_G' value=''>
+				<input type='hidden' name='kijkwijzer_A' value=''>
+				<input type='hidden' name='kijkwijzer_S' value=''>
+				<input type='hidden' name='kijkwijzer_D' value=''>
+				<input type='hidden' name='kijkwijzer_H' value=''>
+				<input type='hidden' name='kijkwijzer_T' value=''>
+
+
+				<br>
+
+
+			</div>
+
+
+
+
+			<div id='uitgebreidzoeken_pegi' name='uitgebreidzoeken_pegi'>
+
+				<div style='position: absolute; z-index: 0;'><img name='bg_slide2' id='bg_slide2' src='/images/slider/bg4pegi.gif' width='440' height='110'></div>
+
+				<div style='position: absolute; z-index: 100; padding-top: 10px;'><a href="javascript: document.zoekenForm.pegi.value=3; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.pegi.value=7; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.pegi.value=12; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.pegi.value=16; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='93' height='70'></a><a href="javascript: document.zoekenForm.pegi.value=18; document.zoekenForm.submit();"><img src='/images/pixel.gif' width='70' height='70'></a></div>
+				<input type='hidden' name='pegi' value=''>
+
+				<div style='padding-top: 84px; padding-left: 20px;'>
+
+
+				<table cellspacing='0' cellpadding='0'>
+				<tr>
+				<td>
+
+				<script language="JavaScript">
+					var A_TPL4h = {
+						'b_vertical' : false,
+						'b_watch': true,
+						'n_controlWidth': 400,
+						'n_controlHeight': 26,
+						'n_sliderWidth': 26,
+						'n_sliderHeight': 26,
+						'n_pathLeft' : 0,
+						'n_pathTop' : 0,
+						'n_pathLength' : 374,
+						's_imgControl': '/images/slider/background.gif',
+						's_imgSlider': '/images/slider/handle.png',
+						'n_zIndex': 1
+					}
+					var A_INIT4h = {
+						's_form' : 'zoekenForm',
+						's_name': 'sliderValue4h2',
+						'n_minValue' : 0,
+						'n_maxValue' : 4,
+						'n_value' : 4,
+						'n_step' : 1
+					}
+
+					new slider(A_INIT4h, A_TPL4h);
+				</script>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<input name="sliderValue4h2" id="sliderValue4h2" value='Let op met kinderen tot 18 jaar' type="Text" onfocus='this.blur();' style='margin-left: 5px; border: 0px; background-color: #c91f45; font-family: Helvetica, Arial; font-size: 12px; font-weight: normal; color: #FFFFFF; width: 350px;'>
+				</div>
+
+				</td>
+				</tr>
+				</table>
+
+				</div>
+
+
+				<div style='margin-top: 10px; padding-top: 10px; padding-bottom: 6px; border-top: 1px solid #000000; border-bottom: 1px solid #000000;'>
+				<div style='padding-bottom: 10px; color: #FFFFFF;'>Sluit deze inhoudspictorgammen uit (witgekleurd betekent uitgesloten):</div><a href="javascript: document.zoekenForm.pegi_G.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Geweld uit te sluiten'><img src='/images/icons/pegi_G.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_T.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Grof taalgebruik uit te sluiten'><img src='/images/icons/pegi_T.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_A.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Angst uit te sluiten'><img src='/images/icons/pegi_A.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_S.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Seks uit te sluiten'><img src='/images/icons/pegi_S.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_H.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Drugs en/of alcoholmisbruik uit te sluiten'><img src='/images/icons/pegi_H.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_D.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met Discriminatie uit te sluiten'><img src='/images/icons/pegi_D.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_P.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met  uit te sluiten'><img src='/images/icons/pegi_P.gif' width='37' height='44' style='margin-right: 15px;'></a><a href="javascript: document.zoekenForm.pegi_O.value='1'; document.zoekenForm.submit();" title='Klik om classificaties met  uit te sluiten'><img src='/images/icons/pegi_O.gif' width='37' height='44' style='margin-right: 15px;'></a>				</div>
+
+				<input type='hidden' name='pegi_G' value=''>
+				<input type='hidden' name='pegi_T' value=''>
+				<input type='hidden' name='pegi_A' value=''>
+				<input type='hidden' name='pegi_S' value=''>
+				<input type='hidden' name='pegi_H' value=''>
+				<input type='hidden' name='pegi_D' value=''>
+				<input type='hidden' name='pegi_P' value=''>
+				<input type='hidden' name='pegi_O' value=''>
+
+
+				<br>
+
+			</div>
+
+
+
+
+			<table cellspacing='0' cellpadding='0' style='width: 100%;'>
+			<tr>
+				<td style='padding-top: 5px;'><a href='index.php?id=3' style='color: #FFFFFF; font-weight: normal;'>Alle instellingen wissen</a></td>
+				<td style='text-align: right; vertical-align: bottom;'>
+
+					<a href='javascript: document.zoekenForm.submit();'><img src='/images/layout/button_zoek.gif' width='69' height='29' border='0'></a>
+
+				</td>
+			</tr>
+			</table>
+
+
+		</div>
+
+		<div style='margin-bottom: 20px; '></form></div>
+
+		<script language='javascript'> uitgebreidZoekenTab(2); </script>
+
+					<span class='h3_tab'>Onderzoek / Wetenschap / Kind & Media</span>
+
+					<div class='hok_video'>
+
+						<div class='hok_scroll' >
+
+
+
+						</div>
+
+						<iframe width="440" height="280" src="//www.youtube.com/embed/4bnXz4nuK04" frameborder="0" allowfullscreen></iframe>
+
+						<div class='ruler'></div><div class='hok_video_meer'><a href='http://www.youtube.com/user/DeKijkwijzer?feature=mhee'  target='_blank' >meer video's</a></div>
+
+					</div>
+
+
+
+
+</div>
+
+</div>
+
+<div id='footer_schuinehoek' class='footer_schuinehoek'><img src='/images/pixel.gif' width='10' height='10'></div>
+<div id='footer' class='footer'>
+
+	<div class='footer_links'>
+
+
+		<a href='/contact'>Contact</a>
+		<span>&nbsp;|&nbsp;</span>
+		<a href='/faq/page149.html'>FAQ</a>
+		<span>&nbsp;|&nbsp;</span>
+		<a href='/professionals-login/page16.html'>Professionals (login)</a>
+		<span>&nbsp;|</span>
+
+		<a href='/cookie-en-privacy-verklaring/page161.html'>Cookies & Privacy</a>
+		<span>&nbsp;|</span>
+
+		<a href='/english'><img src='/images/layout/english.gif' align='absmiddle'></a>
+
+			</div>
+	<div class='footer_twitter'>
+
+<!--//
+		<a href='/'>Twitter</a> &nbsp;<a href='/'><img src='/images/layout/twitter.gif' align='absmiddle'></a>
+//-->
+		<a href='https://www.facebook.com/pages/Kijkwijzer/428833780540662' target='_blank'><img src='/images/icons/facebook.gif' width='31' height='31'></a>
+		<a href='http://twitter.com/#!/DeKijkwijzer' target='_blank'><img src='/images/icons/twitter.gif' width='31' height='31'></a>
+		<a href='http://www.youtube.com/user/DeKijkwijzer' target='_blank'><img src='/images/icons/youtube.gif' width='31' height='31'></a>
+
+	</div>
+
+</div>
+<div id='footer2' class='footer2'>
+
+	<div class='footer_design' colspan='2' style='height: 50px;'>
+
+		<div style='float: left; color: #FFFFFF; text-align: left; margin-right: 20px;'>&copy; NICAM / Kijkwijzer<br>035 6460860<br>RSIN nummer 808304203<br><a href='mailto: info@kijkwijzer.nl' style='color: #FFFFFF'>info@kijkwijzer.nl</a></div>
+
+
+		<a href='http://www.designconsult.nl' target='_blank' title='Webdesign, programming, zoekmachine optimalisatie en meer!'>Website & Programming: DesignConsult.nl</a>
+
+
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+
+		<a href='http://www.mediajunkies.nl' target='_blank'>Design: Mediajunkies.nl</a>
+
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+
+		<a href='http://www.comichouse.nl/ne/illustration/2d/shamrock/' target='_blank'>&copy; Illustraties: Shamrock/ComicHouse.nl</a>
+
+			</td>
+
+</div>
+
+<script type="text/javascript">
+
+window.onload = function()
+{
+
+
+};
+
+</script>
+
+
+</body>
+</html>
