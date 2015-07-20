@@ -1,8 +1,6 @@
 # Kijkwijzer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kijkwijzer`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+[Kijkwijzer](http://kijkwijzer.nl) is the [Dutch film/television-screening system](https://en.wikipedia.org/wiki/Television_content_rating_systems#Netherlands). Since there is no proper API i made this gem to remove the scraping bit from my own app-source.
 
 ## Installation
 
@@ -22,7 +20,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Usage is simple:
+
+```ruby
+Kijkwijzer.search("piano")
+```
+
+Gives you results of movies, documentaries etc with known ratings.
+
+You can also filter by year:
+
+```ruby
+Kijkwijzer.search("piano", {year: 2011})
+```
+
+### Rails helpers
+
+To make things even easier I included the SVG-icon set. Simply use the two methods.
+
+Within the html's head, load the iconset definition:
+
+```ruby
+<%= render_kijkwijzer_svg_definitions %>
+```
+Then for each movie:
+
+```ruby
+<%= render_kijkwijzers ratings %>
+```
+
+(where ratings is a single result object)
+
 
 ## Development
 

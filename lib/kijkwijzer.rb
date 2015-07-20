@@ -2,51 +2,12 @@ require "kijkwijzer/version"
 include ERB::Util
 require 'nokogiri'
 require 'open-uri'
+require 'kijkwijzer/result'
+# require 'kijkwijzer/view_helpers'
+
+require 'kijkwijzer/railtie' if defined?(Rails)
 
 module Kijkwijzer
-  module ViewHelpers
-    def render_kijkwijzer_svg_definitions
-      svg_txt = File.open(open(File.join(Dir.pwd,'lib','kijkwijzer.svg'))).read
-      svg_txt = svg_text.html_safe if defined?(ActiveSupport)
-      svg_txt
-    end
-    def render_kijkwijzers result
-      result_svgs = ""
-      result.ratings.each do |rating|
-        result_svgs+="<svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer rating kijkwijzer_#{rating}\"><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_#{rating}\"></use></svg>"
-      end
-      result_svgs
-      result_svgs = result_svgs.html_safe if defined?(ActiveSupport)
-      result_svgs
-    end
-  end
-
-  class Result
-    attr_accessor :title
-    attr_accessor :production_type
-    attr_accessor :year
-    attr_accessor :ratings
-
-    def ratings
-      @ratings.collect do |rating|
-        rating = rating.to_s.downcase
-        rv = nil
-        rv = rating if ["al","6","9","12","16"].include? rating
-        rv = "violence" if ["violence","g"].include? rating
-        rv = "scary" if ["scary","a"].include? rating
-        rv = "sex" if ["sex","s"].include? rating
-        rv = "drugs" if ["drugs","h"].include? rating
-        rv = "discrimination" if ["discrimination","d"].include? rating
-        rv = "language" if ["language","t"].include? rating
-        rv
-      end.compact
-    end
-
-    def to_s
-      "#<Kijkwijzer::Result @title=\"#{title}\", @year=#{year}>"
-    end
-  end
-
   class << self
     def search_url(search)
       "http://www.kijkwijzer.nl/index.php?id=3__i&searchfor=#{url_encode(search)}&tab=KIJKWIJZER"

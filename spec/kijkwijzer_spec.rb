@@ -36,6 +36,9 @@ describe Kijkwijzer do
   end
 
   describe 'helpers' do
+    require 'kijkwijzer/view_helpers' #otherwise done by the railtie, which we're skipping for now
+
+
     it 'can render svg definitions' do
       class TestView
         include Kijkwijzer::ViewHelpers
