@@ -3,8 +3,6 @@ include ERB::Util
 require 'nokogiri'
 require 'open-uri'
 require 'kijkwijzer/result'
-# require 'kijkwijzer/view_helpers'
-
 require 'kijkwijzer/railtie' if defined?(Rails)
 
 module Kijkwijzer
