@@ -8,7 +8,7 @@ module Kijkwijzer
     def render_kijkwijzers result
       result_svgs = ""
       result.ratings.each do |rating|
-        result_svgs+="<svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer rating kijkwijzer_#{rating}\"><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_#{rating}\"></use></svg>"
+        result_svgs+="<div class=\"kijkwijzer icons\"><svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer_#{rating}\" title=\"#{rating}\" ><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_#{rating}\"></use></svg></div>"
       end
       result_svgs
       result_svgs = result_svgs.html_safe if defined?(ActiveSupport)
