@@ -12,13 +12,9 @@ module Kijkwijzer
       @ratings.collect do |rating|
         rating = rating.to_s.downcase
         rv = nil
-        rv = rating if ["al","6","9","12","16"].include? rating
-        rv = "violence" if ["violence","g"].include? rating
-        rv = "scary" if ["scary","a"].include? rating
-        rv = "sex" if ["sex","s"].include? rating
-        rv = "drugs" if ["drugs","h"].include? rating
-        rv = "discrimination" if ["discrimination","d"].include? rating
-        rv = "language" if ["language","t"].include? rating
+        Kijkwijzer::POSSIBLE_RATINGS.each do |pr|
+          rv = pr[:value] if (rating == pr[:value] or rating == pr[:code])
+        end
         rv
       end.compact
     end

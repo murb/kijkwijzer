@@ -31,7 +31,13 @@ describe Kijkwijzer do
       r.ratings = ["A"]
       expect(r.ratings).to eq(["scary"])
     end
-
+    it "should reject invalid ratings" do
+      r = Kijkwijzer::Result.new
+      r.ratings = ["ALt"]
+      expect(r.ratings).to eq([])
+      r.ratings = ["17"]
+      expect(r.ratings).to eq([])
+    end
 
   end
 
