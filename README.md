@@ -1,6 +1,6 @@
 # Kijkwijzer
 
-[Kijkwijzer](http://kijkwijzer.nl) is the [Dutch film/television-screening system](https://en.wikipedia.org/wiki/Television_content_rating_systems#Netherlands). Since there is no proper API i made this gem to remove the scraping bit from my own app-source.
+[Kijkwijzer](http://kijkwijzer.nl) is the [Dutch film/television-screening system](https://en.wikipedia.org/wiki/Television_content_rating_systems#Netherlands). Since there is no proper API, this gem was made to remove the scraping bit from my own app-source. Additionally some helper methods have been added to make displaying the icons easier (the icons are included in this gem as a SVG-iconset).
 
 ## Installation
 
