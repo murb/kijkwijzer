@@ -13,6 +13,10 @@ module Kijkwijzer
     def get_content(search)
       Nokogiri::HTML(open(search_url(search)))
     end
+
+    # Search the Kijkwijzer database
+    #
+    # @return [Kijkwijzer::Result]
     def search(search, filter={})
       res = get_content(search)
       results = []

@@ -45,14 +45,32 @@ describe Kijkwijzer do
       end
       expect(TestView.new.render_kijkwijzer_svg_definitions[0..4]).to eq("<svg ")
     end
-    it 'can render svg icons' do
+    it 'can render svg icons from result' do
       class TestView
         include Kijkwijzer::ViewHelpers
       end
       rating = Kijkwijzer::Result.new
       rating.ratings = ["AL"]
       kijkwijzer_svg_txt = TestView.new.render_kijkwijzers(rating)
-      expect(kijkwijzer_svg_txt).to eq("<svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer rating kijkwijzer_al\"><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_al\"></use></svg>")
+      expect(kijkwijzer_svg_txt).to eq("<div class=\"kijkwijzer icons\"><svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer_al\" title=\"al\"><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_al\"></use></svg></div>")
+    end
+    it 'can render svg icons from empty array' do
+      class TestView
+        include Kijkwijzer::ViewHelpers
+      end
+      # rating = Kijkwijzer::Result.new
+      rating = []
+      kijkwijzer_svg_txt = TestView.new.render_kijkwijzers(rating)
+      expect(kijkwijzer_svg_txt).to eq("<div class=\"kijkwijzer icons\"></div>")
+    end
+    it 'can render svg icons from filled array' do
+      class TestView
+        include Kijkwijzer::ViewHelpers
+      end
+      # rating = Kijkwijzer::Result.new
+      rating = ["6","scary"]
+      kijkwijzer_svg_txt = TestView.new.render_kijkwijzers(rating)
+      expect(kijkwijzer_svg_txt).to eq("<div class=\"kijkwijzer icons\"><svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer_6\" title=\"6\"><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_6\"></use></svg><svg viewBox=\"0 0 100 100\" class=\"icon kijkwijzer_scary\" title=\"scary\"><use xlink:href=\"#kijkwijzer_base\"></use><use xlink:href=\"#kijkwijzer_scary\"></use></svg></div>")
     end
   end
 end

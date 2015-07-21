@@ -5,6 +5,9 @@ module Kijkwijzer
     attr_accessor :year
     attr_accessor :ratings
 
+    # Get the ratings for the result
+    #
+    # @return [String] with kijkwijzer-ratings (English-language-labels)
     def ratings
       @ratings.collect do |rating|
         rating = rating.to_s.downcase
