@@ -39,7 +39,8 @@ module Kijkwijzer
         meta_parse = result.text.match(/Productietype\:\s(.*)\.\sProductiejaar\:\s(\d\d\d\d)\.\s/)
         r.year = meta_parse[2].to_i
         r.production_type = meta_parse[1]
-        r.ratings = result.css("img").collect{|a| a.attr("src").match(/\/images\/icons\/M_(.*)\.png/)[1]}
+        p result.css("img").collect{|a| a}
+        r.ratings = result.css("img").collect{|a| a.attr("src").match(/\/upload\/pictogrammen\/\d*_\d*_(.*)\.png/)[1]}
         include_r = true
         filter.each do |key, value|
           include_r = (r.send(key) == value)

@@ -22,6 +22,7 @@ describe Kijkwijzer do
     expect(res.count).to eq(10)
     res=Kijkwijzer.search("piano", {year: 2014})
     expect(res.count).to eq(2)
+    expect(res[1].ratings).to eq(["12","violence","language"])
   end
   describe 'Result' do
     it "should handle ratings" do
