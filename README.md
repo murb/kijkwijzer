@@ -1,5 +1,5 @@
 # Kijkwijzer
-[![Code Climate](https://codeclimate.com/github/murb/kijkwijzer.png)](https://codeclimate.com/github/murb/workbook) [![Build Status](https://travis-ci.org/murb/kijkwijzer.svg?branch=master)](https://travis-ci.org/murb/workbook) [![Gem Version](https://badge.fury.io/rb/kijkwijzer.svg)](http://badge.fury.io/rb/workbook)
+[![Code Climate](https://codeclimate.com/github/murb/kijkwijzer.png)](https://codeclimate.com/github/murb/kijkwijzer) [![Build Status](https://travis-ci.org/murb/kijkwijzer.svg?branch=master)](https://travis-ci.org/murb/kijkwijzer) [![Gem Version](https://badge.fury.io/rb/kijkwijzer.svg)](http://badge.fury.io/rb/kijkwijzer)
 
 
 [Kijkwijzer](http://kijkwijzer.nl) is the [Dutch film/television-screening system](https://en.wikipedia.org/wiki/Television_content_rating_systems#Netherlands). Since there is no proper API, this gem was made to remove the scraping bit from my own app-source. Additionally some helper methods have been added to make displaying the icons easier (the icons are included in this gem as a SVG-iconset).
