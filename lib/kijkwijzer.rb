@@ -36,9 +36,10 @@ module Kijkwijzer
       res.css('.content_hok .nieuwsitem').each do |result|
         r = Result.new()
         r.title = result.css('b').text
-        meta_parse = result.text.match(/Productietype\:\s(.*)\.\sProductiejaar\:\s(\d\d\d\d)\.\s/)
-        r.year = meta_parse[2].to_i
-        r.production_type = meta_parse[1]
+        production_type_match = result.text.match(/Productietype\:\s(.*)\.(\sProductie)/)
+        production_year_match = result.text.match(/\sProductiejaar\:\s(\d\d\d\d)\.\s/)
+        r.year = production_year_match[1].to_i if production_year_match
+        r.production_type = production_type_match[1] if production_type_match
         r.ratings = result.css("img").collect{|a| a.attr("src").match(/\/upload\/pictogrammen\/\d*_\d*_(.*)\.png/)[1]}
         include_r = true
         filter.each do |key, value|
