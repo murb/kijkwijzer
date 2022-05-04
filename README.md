@@ -56,6 +56,16 @@ Then to display the movie results use the view helper `render_kijkwijzers`:
 
 Make sure you format the icons properly, otherwise you'll get huge icons ... I believe I've added plenty of classes for easy styling using css.
 
+## Changelog
+
+0.2.0 May 4, 2022
+Updated results scraping to their pudated HTML format
+
+0.1.5 November 16, 2021
+update dependencies / loosen dev requirements
+
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
