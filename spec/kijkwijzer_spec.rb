@@ -5,15 +5,15 @@ describe Kijkwijzer do
     expect(Kijkwijzer::VERSION).not_to be nil
   end
   it 'can generate a search url' do
-    expect(Kijkwijzer.search_url("aaa bbb")).to eq("http://www.kijkwijzer.nl/index.php?id=3__i&searchfor=aaa%20bbb&tab=KIJKWIJZER")
-    expect(Kijkwijzer.search_url("piano")).to eq("http://www.kijkwijzer.nl/index.php?id=3__i&searchfor=piano&tab=KIJKWIJZER")
+    expect(Kijkwijzer.search_url("aaa bbb")).to eq("https://www.kijkwijzer.nl/zoeken/?query=aaa%20bbb&producties=0")
+    expect(Kijkwijzer.search_url("piano")).to eq("https://www.kijkwijzer.nl/zoeken/?query=piano&producties=0")
   end
-  describe 'full stack' do
+  describe 'full stack (default off)' do
     if false
       it 'can retrieve content' do
         res=Kijkwijzer.get_content("Wildlife")
         expect(res.class).to eq(Nokogiri::HTML::Document)
-        expect(res.css("title").text()).to eq("Classificaties - kijkwijzer.nl")
+        expect(res.css("title").text()).to eq("Zoeken")
       end
       it 'can search' do
         title = "Wildlife"
@@ -28,11 +28,11 @@ describe Kijkwijzer do
       Nokogiri::HTML(open(File.join(Dir.pwd,'spec','fixture','piano_results.html')))
     )
     res=Kijkwijzer.search("piano")
-    expect(res.count).to eq(10)
-    res=Kijkwijzer.search("piano", {year: 2014})
-    expect(res.count).to eq(2)
-    expect(res[1].production_type).to eq("Speelfilm")
-    expect(res[1].ratings).to eq(["12","violence","language"])
+    expect(res.count).to eq(45)
+    res=Kijkwijzer.search("piano", {year: 2001})
+    expect(res.count).to eq(3)
+    expect(res[0].production_type).to eq("Speelfilm")
+    expect(res[0].ratings).to eq(["16","violence","language"])
   end
   describe "faulty response handling" do
     it 'can deal with empty response' do
@@ -49,7 +49,7 @@ describe Kijkwijzer do
         Nokogiri::HTML(open(File.join(Dir.pwd,'spec','fixture','unexpected_description.html')))
       )
       res=Kijkwijzer.search("piano")
-      expect(res.count).to eq(10)
+      expect(res.count).to eq(45)
       res=Kijkwijzer.search("piano", {year: 2014})
       expect(res.count).to eq(0)
     end

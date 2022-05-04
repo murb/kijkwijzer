@@ -33,13 +33,17 @@ module Kijkwijzer
     class << self
       def new_from_nokogiri_result_fragment nokogiri_result_fragment
         r = self.new
-        r.title = nokogiri_result_fragment.css('b').text
-        production_type_match = nokogiri_result_fragment.text.match(/Productietype\:\s(.*)\.(\sProductie)/)
-        production_year_match = nokogiri_result_fragment.text.match(/\sProductiejaar\:\s(\d\d\d\d)\.\s/)
-        r.year = production_year_match[1].to_i if production_year_match
-        r.production_type = production_type_match[1] if production_type_match
-        r.ratings = nokogiri_result_fragment.css("img").collect{|a| a.attr("src").match(/\/upload\/pictogrammen\/\d*_\d*_(.*)\.png/)[1]}
-        return r
+        r.title = nokogiri_result_fragment.css('.c-search__title').text
+        production_type_year_match = nokogiri_result_fragment.css('.c-search__text').text.match(/\A\s*(.*)\s*\((\d\d\d\d)\)\s*$/)
+        if production_type_year_match
+          r.year = production_type_year_match[2].to_i if production_type_year_match[2]
+          r.production_type = production_type_year_match[1].strip if production_type_year_match[1]
+          r.ratings = nokogiri_result_fragment.css(".c-search__marks .c-search__mark").collect do |a|
+            class_fragment = a.attr("class").match(/\Ac-search__mark\sc-search__mark--(.*)$/)[1]
+            Kijkwijzer::POSSIBLE_RATINGS.find{|a| a[:nl_key] == class_fragment}&.[](:value)
+          end.compact
+          return r
+        end
       end
     end
   end
